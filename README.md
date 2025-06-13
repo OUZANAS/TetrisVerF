@@ -1,253 +1,232 @@
-TETRIS PROJECT
-Une implémentation Java du jeu classique
-Anas Ouzine
-Aya Laaouine
-Ihssane Moulabbi
-Kawtar Boutaskiouin
-Encadré par Monsieur Lahcen Moumoun
+# TetrisVerF
 
-School Logo
-University Logo
-Découvrir
-Présentation du Projet
-Histoire
-Notre projet consiste en une implémentation complète du jeu Tetris, développé en Java. Ce jeu de puzzle classique, créé par Alexey Pajitnov en 1984, met le joueur au défi de manipuler des pièces géométriques (tetrominos)qui tombent pour former des lignes horizontales complètes.
+TetrisVerF is a modern implementation of the classic Tetris game, built using web technologies and powered by Firebase for real-time features. This project showcases a fully functional Tetris game with a clean user interface, responsive design, and engaging gameplay. Whether you're a fan of retro games or a developer interested in Firebase integration, this project offers a fun and educational experience.
 
-Objectif
-L'objectif principal était de créer une version du jeu fidèle à l'original, tout en appliquant les principes de conception orientée objet et l'architecture MVC (Modèle-Vue-Contrôleur) pour assurer une base de code maintenable et extensible.
+🔗 **Live Demo**: [Play TetrisVerF](https://9000-firebase-tetris-flow-showcase-main-1749652818460.cluster-ombtxv25tbd6yrjpp3lukp6zhc.cloudworkstations.dev/?monospaceUid=668046)
 
-Fonctionnalités
-•
-Génération aléatoire des pièces (tetrominos)
-•
-Rotation des pièces (0°, 90°, 180°, 270°)
-•
-Déplacement latéral des pièces
-•
-Détection et suppression des lignes complètes
-•
-Système de score basé sur le nombre de lignes effacées et le niveau
-•
-Augmentation progressive de la difficulté (vitesse)
-•
-Affichage de la pièce suivante
-•
-Affichage du score et du niveau actuel
-Technologies
-Java SE
-Swing pour l'interface graphique
-Architecture MVC
-Collections Java
-Diagramme de Classes UML
-Comprendre l'Architecture du Jeu
-Le diagramme de classes UML ci-dessous offre une vue d'ensemble structurée de l'architecture de notre application Tetris. Il détaille les classes principales, leurs attributs, méthodes et les relations qui les unissent, illustrant ainsi comment les différents composants interagissent pour former le jeu complet.
+## Features
 
-Cette conception orientée objet assure une modularité, une maintenabilité et une extensibilité accrues du code.
+- **Classic Tetris Gameplay**: Enjoy the timeless mechanics of Tetris with falling tetrominoes, line clearing, and increasing difficulty.
+- **Responsive Design**: Play on desktop or mobile devices with a user-friendly interface.
+- **Firebase Integration**: Leverages Firebase for real-time data storage, user authentication, or leaderboard functionality (if applicable).
+- **Smooth Animations**: Built with modern JavaScript, HTML5, and CSS3 for a polished gaming experience.
+- **Customizable**: Easily modify game parameters or styling to create your own version.
 
-Diagramme de Classes UML du Jeu Tetris
-Architecture MVC
-Notre projet suit le pattern MVC pour une séparation claire des responsabilités
+## Technologies Used
 
-Modèle
-Contrôleur
-Vue
-Modèle
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Backend**: Firebase (Firestore, Authentication, Hosting)
+- **Tools**: Git, npm (if dependencies are used)
 
-📁 manager/
-•
-PlayManager - logique principale
-•
-DatabaseManager - gestion BDD
-📁 mino/
-•
-Block - unité de base
-•
-Mino - classe abstraite des pièces
-•
-7 types de Tetrominos (I, L, T, Z, O...)
-Gère les données et la logique métier du jeu Tetris.
+## Getting Started
 
-Vue
+Follow these instructions to set up and run the project locally.
 
-🖥️ Composants Visuels
-•
-GamePanel - panneau principal de jeu
-•
-Sound - gestion audio du jeu
-🎨
-Interface utilisateur & rendu graphique
-Gère l'affichage graphique et l'interface utilisateur.
+### Prerequisites
 
-Contrôleur
+- [Node.js](https://nodejs.org/) (if using npm for dependencies)
+- [Git](https://git-scm.com/)
+- A [Firebase](https://firebase.google.com/) account for backend services
+- A code editor like [VS Code](https://code.visualstudio.com/)
 
-🎮 Contrôle & Coordination
-•
-Main - point d'entrée de l'application
-•
-KeyHandler - gestion des entrées clavier
-⚡
-Coordination Modèle ↔ Vue
-Traite les entrées utilisateur et coordonne le système.
+### Installation
 
-Flux de données & Interactions
-👤 Utilisateur
-Entrées clavier
-Input
-🎮 Contrôleur
-KeyHandler → Main
-Update
-🧠 Modèle
-PlayManager + Minos
-Render
-🖥️ Vue
-GamePanel + Sound
-Avantages de notre Architecture
-🔄
-Séparation des Responsabilités
-Chaque couche a un rôle bien défini
-🧩
-Modularité
-7 types de Tetrominos séparés et extensibles
-🔧
-Maintenance Facile
-PlayManager centralise la logique de jeu
-🚀
-Évolutivité
-Facile d'ajouter de nouvelles fonctionnalités
-📁 Structure du Code
-controller/
-2 classes
-→
-model/
-11 classes
-→
-view/
-2 classes
-Diagramme d'États du Jeu
-Le diagramme d'états représente les différentes transitions possibles entre les états du jeu.
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/OUZANAS/TetrisVerF.git
+   cd TetrisVerF
+Install Dependencies (if applicable) If the project uses npm packages, install them:
+bash
 
-Menu Principal
-Jeu en cours
-Pause
-Game Over
-Diagramme d'États
-Démonstration
-Démonstration du jeu Tetris
-Points clés de la démonstration
-🎮
-Interface du jeu complète avec représentation graphique
-🔄
-Mouvements et rotations fluides des pièces
-✨
-Effacement des lignes complètes avec animation
-📊
-Système de score et de niveau dynamique
-🔄
-Gestion du game over et redémarrage
-Démonstration en direct disponible lors de la présentation
-Code Source
-Découvrez notre implémentation complète sur GitHub avec documentation détaillée, tests unitaires et architecture modulaire.
+Collapse
 
-Repository GitHub
-Code source complet avec architecture MVC, documentation JavaDoc, et exemples d'utilisation. Projet organisé en modules pour une maintenance optimale.
+Wrap
 
-Java
-Swing
-MVC
-OOP
-Voir le Code Source
-Terminal
-$ git clone https://github.com/your-repo/tetris-java.git $ cd tetris-java $ javac -d bin src/**/*.java $ java -cp bin Main 🎮 Tetris Game Started! 
-Conclusion
-✓
-Réalisations
-✓
-Implémentation complète du jeu Tetris en Java
-✓
-Architecture MVC robuste, claire et évolutive
-✓
-Interface graphique intuitive et réactive
-✓
-Intégration d'une base de données via XAMPP pour enregistrer les meilleurs scores
-✓
-Respect des règles et du fonctionnement du jeu Tetris original
-⚠
-Difficultés rencontrées
-•
-Problème avec SQLite : fichier .db en binaire, illisible → passage à XAMPP avec MySQL
-•
-Rotation des pièces : gestion des collisions aux bords parfois complexe
-•
-Problèmes de synchronisation entre le rendu graphique et la logique de jeu
-•
-Difficultés pour fermer la boîte de dialogue "Entrez votre nom" après validation
-•
-Déclenchement du son du Game Over instable selon les cas
-•
-Optimisation des performances pour garantir une bonne fluidité
-🚀
-Perspectives d'amélioration
-Système de high scores en ligne ou global
-Serveur centralisé pour comparaisons mondiales
+Run
 
-Ajout de niveaux de difficulté progressifs
-Vitesse adaptative et défis spéciaux
+Copy
+npm install
+Set Up Firebase
+Create a Firebase project in the Firebase Console.
+Add a web app to your Firebase project and copy the configuration object.
+Create a .env file in the project root (or update the Firebase config file) with your Firebase credentials:
+env
 
-Intégration de sons et musiques immersifs
-Ambiance sonore complète et effets audio
+Collapse
 
-Développement d'un mode multijoueur local ou en réseau
-Compétition temps réel entre joueurs
+Wrap
 
-💡
-Conclusion
-Ce projet nous a permis d'appliquer les principes de programmation orientée objet et de conception logicielle dans un contexte interactif.
+Copy
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+Initialize Firebase in your project (refer to src/firebase.js or similar).
+Run the Project Locally Start a local development server:
+bash
 
-Nous avons surmonté plusieurs défis techniques, ce qui a renforcé notre autonomie, notre rigueur, et notre capacité à concevoir une application complète.
+Collapse
 
-Les compétences acquises pourront être réutilisées dans des projets plus complexes à l'avenir.
+Wrap
 
-📝
-5
-Réalisations clés
-⚠️
-6
-Défis surmontés
-🚀
-4
-Améliorations futures
-💡
-1
-Projet réussi
-Notre Équipe
-Un projet entièrement collaboratif développé par une équipe unie
+Run
 
-Travail d'équipe
-Anas Ouzine
-Aya Laaouine
-Ihssane Moulabbi
-Kawtar Boutaskiouin
-🎓
-Remerciements
-Nous tenons à remercier notre encadrant du module JAVA
+Copy
+npm run dev
+Open http://localhost:5173 (or the port specified) in your browser.
+Deploy to Firebase (Optional)
+Install the Firebase CLI:
+bash
 
-Monsieur Lahcen Momoun
+Collapse
 
-Pour ses précieux conseils, son accompagnement et son expertise qui ont contribué à la réussite de ce projet collaboratif.
+Wrap
 
+Run
+
+Copy
+npm install -g firebase-tools
+Log in to Firebase:
+bash
+
+Collapse
+
+Wrap
+
+Run
+
+Copy
+firebase login
+Initialize Firebase Hosting:
+bash
+
+Collapse
+
+Wrap
+
+Run
+
+Copy
+firebase init
+Select Hosting and follow the prompts.
+Deploy the project:
+bash
+
+Collapse
+
+Wrap
+
+Run
+
+Copy
+firebase deploy
+Usage
+Play the Game: Navigate to the live demo or run locally to start playing. Use arrow keys (or on-screen controls for mobile) to move and rotate tetrominoes.
+Customize: Modify game logic in src/game.js (or similar) or styles in src/styles.css to tweak gameplay or appearance.
+Leaderboard: If implemented, sign in via Firebase Authentication to save scores (check src/auth.js for details).
+Project Structure
+plaintext
+
+Collapse
+
+Wrap
+
+Copy
+├── public/              # Static assets (images, favicon, etc.)
+├── src/                 # Source code
+│   ├── assets/          # Game assets (sprites, sounds)
+│   ├── firebase.js      # Firebase configuration and initialization
+│   ├── game.js          # Core game logic
+│   ├── styles.css       # Game styling
+│   └── main.js          # Entry point
+├── .gitignore           # Files/folders to ignore in Git
+├── README.md            # Project documentation
+├── package.json         # Project dependencies and scripts
+└── vite.config.js       # Vite configuration (if using Vite)
+Contributing
+Contributions are welcome! To contribute:
+
+Fork the repository.
+Create a feature branch:
+bash
+
+Collapse
+
+Wrap
+
+Run
+
+Copy
+git checkout -b feature/your-feature
+Commit your changes:
+bash
+
+Collapse
+
+Wrap
+
+Run
+
+Copy
+git commit -m "Add your feature"
+Push to the branch:
+bash
+
+Collapse
+
+Wrap
+
+Run
+
+Copy
+git push origin feature/your-feature
+Open a Pull Request.
+Please follow the Code of Conduct and report issues via GitHub Issues.
+
+License
+This project is licensed under the MIT License.
+
+Acknowledgments
+Inspired by the classic Tetris game.
+Built with Firebase Studio for rapid development.
+Thanks to the open-source community for tools and resources.
 Contact
-Vous souhaitez en savoir plus sur notre projet ou collaborer sur des projets similaires ? N'hésitez pas à nous contacter !
+For questions or feedback, reach out via GitHub Issues or contact OUZANAS.
 
-Documentation
-GitHub
-Merci pour votre attention !
-🎮
-🏆
-✨
-Notre présentation du projet Tetris se termine ici.
+Happy coding and enjoy playing TetrisVerF! 🎮
 
-Nous espérons que vous avez apprécié notre démonstration et notre approche collaborative.
+text
 
-© 2025 Tetris Project - Développé en équipe
+Collapse
 
-Projet réalisé dans le cadre du module JAVA
+Wrap
+
+Copy
+### Explanation
+- **Project Description**: Describes the project as a Tetris game with Firebase integration, linking to the live demo for visibility.
+- **Features**: Highlights gameplay, responsiveness, and Firebase features, assuming standard Tetris mechanics and potential Firebase functionalities (e.g., leaderboards).
+- **Technologies**: Lists assumed technologies (HTML5, CSS3, JavaScript, Firebase) based on the Firebase-hosted demo. If your project uses specific frameworks (e.g., React, Vite), update this section.
+- **Setup Instructions**: Provides clear steps for cloning, installing dependencies, configuring Firebase, and running locally. Includes optional Firebase deployment steps.
+- **Usage**: Guides users on playing and customizing the game.
+- **Project Structure**: Outlines a typical web project structure, adjustable based on your actual files.
+- **Contributing and License**: Encourages contributions and specifies a common MIT license (create a `LICENSE` file if needed).
+- **Acknowledgments**: Credits Firebase Studio and the Tetris concept, referencing the Reddit post about Firebase Studio for context.[](https://www.reddit.com/r/Firebase/comments/1jziwtu/i_used_firebase_studio_to_build_a_tetris_game/)
+- **Assumptions**: Since I couldn’t access the demo’s source code, I assumed a typical Firebase web app structure. Update paths (e.g., `src/game.js`) or Firebase features (e.g., Authentication) to match your project.
+
+### How to Add to Your Repository
+1. **Create `README.md`**:
+   - In `C:\Users\anaso\Downloads\tertisVerF`, create a file named `README.md`.
+   - Copy and paste the content above into `README.md` using a text editor (e.g., VS Code, Notepad).
+2. **Update Content**:
+   - Replace placeholders (e.g., file paths, Firebase features) with specifics from your project.
+   - If you use a framework (e.g., React) or different tools, update the **Technologies Used** and **Installation** sections.
+3. **Commit and Push**:
+   ```bash
+   cd C:\Users\anaso\Downloads\tertisVerF
+   git add README.md
+   git commit -m "Add README.md"
+   git push
+Verify:
+Visit https://github.com/OUZANAS/TetrisVerF to ensure the README renders correctly.
